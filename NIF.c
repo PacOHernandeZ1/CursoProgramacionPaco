@@ -10,11 +10,8 @@
 int Calcular_Nif (int *y)//recibimos el valor que nos manda la funcion comprobacion
 {
     
-    
-    
-    //Calculo DNI
-      
-   int Calculo_DNI;
+          
+    int Calculo_DNI;
     char Letra_DNI[] = {'T','R','W','A', 'G','M','Y','F','P', 'D','X','B','N',
     'J','Z','S','Q','V','H','L','C','K','E','O'} ;
     

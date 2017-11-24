@@ -13,25 +13,33 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 
-/*
+
+/*  
  * 
  */
-int Calcular_Nif (int *y);
-int Romanos (int *z);
+int Calcular_Nif (int *y);  // funcion para calcular el Nif
+int Romanos (int *z);   //funcion para calcular en romanos
 
 int Comprobacion(int *x ) 
 
 {
-    int numero;
+    /*int numero;
+    char pasoachar[20];
+    scanf("%i", &numero);*/
+    /* atoi(numero) pasoachar;
+        printf("%c", pasoachar);
+        */
     
-    scanf("%i", &numero);
     
     
     
-    if (*x==1) //eleccion dni
+    if (*x==1) //cuando elegimos 1 en el menu comprueba que este entre los parametros 1 y 99999999
+                // si es asi, llamamos la funcion Dni
     {
-          if (numero>=1 && numero<=99999999) //condicion para eleccion de dni
+        
+        if (numero>=1 && numero<=99999999) 
           {
               Calcular_Nif (&numero);
           }
@@ -45,10 +53,11 @@ int Comprobacion(int *x )
     }
     
     
-    if (*x==2) //eleccion romano
+    if (*x==2) //cuando elegimos 2 en el menu comprueba que este entre los parametros 1 y 3.999
+                // si es asi, llamamos la funcion romanos
     { 
         
-          if (numero>=1 && numero<=3999) //condicion para eleccion de romano
+          if (numero>=1 && numero<=3999) 
           {
               Romanos (&numero);
           }

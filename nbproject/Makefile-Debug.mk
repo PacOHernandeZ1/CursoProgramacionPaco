@@ -35,11 +35,11 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
-	${OBJECTDIR}/Comprobacion2.o \
 	${OBJECTDIR}/Comprobacion_Numero.o \
 	${OBJECTDIR}/NIF.o \
 	${OBJECTDIR}/Romanos.o \
-	${OBJECTDIR}/main.o
+	${OBJECTDIR}/main.o \
+	${OBJECTDIR}/validacionNumero.o
 
 
 # C Compiler Flags
@@ -66,11 +66,6 @@ ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/funcion_para_romanos_y_nif: ${OBJECTF
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.c} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/funcion_para_romanos_y_nif ${OBJECTFILES} ${LDLIBSOPTIONS}
 
-${OBJECTDIR}/Comprobacion2.o: Comprobacion2.c
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Comprobacion2.o Comprobacion2.c
-
 ${OBJECTDIR}/Comprobacion_Numero.o: Comprobacion_Numero.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
@@ -90,6 +85,11 @@ ${OBJECTDIR}/main.o: main.c
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/main.o main.c
+
+${OBJECTDIR}/validacionNumero.o: validacionNumero.c
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.c) -g -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/validacionNumero.o validacionNumero.c
 
 # Subprojects
 .build-subprojects:
